@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+}
+
+#header-main {
+    background: url('../img/fondo-inicio.jpg');
+    background-size: cover; 
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 10vh; /* Altura del 10% de la ventana */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    margin-top: 10vh;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10%;
+    height: 90vh; /* Altura del 90% de la ventana */
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(32, 47, 29);
+}
+
+/* Estilo para separación entre botones */
+.main-container button {
+    margin: 1%;
+}
+
+/* Para hacer la página responsive */
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction:column;
+        height: 20vh;
+    }
+
+    #logo {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    main {
+        margin-top: 40vh;
+        padding: 5%;
+        height: auto;
+    }
+    .modal-content {
+        width: 90%; /* Ancho del contenido del modal en pantallas pequeñas */
+    }
+}
+
+
+
+
+
+

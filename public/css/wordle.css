@@ -1,0 +1,136 @@
+/* Estilos CSS para el layout */
+.image-container {
+    display: flex;
+    flex-direction: row; /* Alinea los elementos horizontalmente */
+    justify-content:space-between; /* Distribuye los elementos a lo largo del contenedor */
+}
+
+.option-container {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 10px;
+}
+
+.option-container > * {
+    margin: 0 5px;
+}
+
+#timer {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  border: 2px solid #333;
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/*El css para el botón está sacado de https://markodenic.com/tools/buttons-generator/ y modificado*/
+.option-btn {
+    min-width: 150px;
+    height: 50px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    border-radius: 5px;
+    border: none;
+    background-color: #345a18;
+}
+
+.option-btn:hover {
+    border-radius: 5px;
+    padding-bottom: 20px;
+    /* padding-left:8px; */
+}
+
+.option-btn:hover:after {
+    opacity: 1;
+    right: 35px;
+}
+
+.option-btn:after {
+    content: "(-20 segundos)";
+    position: absolute;
+    opacity: 0;
+    font-size: 12px;
+    line-height: 70px;
+    top: 0;
+    transition: 0.4s;
+}
+
+#discard-letter-btn:after {
+    content: "(-5 segundos)";
+}
+
+.bloqueado {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+  
+
+@media (max-width: 768px) {
+    .image-container {
+        flex-direction: column;
+    }
+
+    #feedback-image {
+        max-width: 100%;
+    }
+}
+
+/* feedback-images-div canvas {
+     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+} */
+
+.image-container {
+    position: relative; /* Establece posición relativa para el contenedor */
+}
+
+#feedback-image {
+    border: 2px solid black;
+    max-width: 75%;
+    height: auto;
+    z-index: 1;
+    max-height: 85%;
+}
+
+canvas {
+    position: absolute;
+    z-index: 2;
+    border: 2px solid black;
+    max-width: 85%;
+    height: auto;
+}
+
+/* Estilo base para los botones */
+.popup-ganador {
+    background-color: #345a18;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    color: white;
+    border-radius: 10px;
+}
+
+/* Estilo para los botones activos */
+.popup-ganador.active {
+    background-color: #009879;
+}
