@@ -1,0 +1,135 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: grid;
+}
+
+#header-main {
+    background: url('../../../../public/img/fondo-inicio.jpg');
+    background-size: cover; 
+    place-items: center;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    height: 10vh; /* Altura del 10% de la ventana */
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    width: 100%; /* Ajusta el ancho de main al 100% para que se centre correctamente */
+    box-sizing: border-box;
+    padding: 10%; /* Reducido del 10% para más espacio */
+    height: 90vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(32, 47, 29);
+}
+
+/* Estilo para separación entre botones */
+.main-container button {
+    margin: 1%;
+}
+
+#juego {
+    #juego {
+    width: 800px; /* Anchura fija del juego */
+    height: 800px; /* Altura fija del juego */
+    margin: 20px auto; /* Centra el juego horizontalmente y añade un poco de espacio vertical */
+    position: relative; /* Posicionamiento relativo para cualquier contenido interno posicionado absolutamente */
+    background-color: #000; /* Fondo negro para que sea visible durante las pruebas */
+}
+}
+
+.controls {
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+.dialog-box {
+    background-color: #50623A; /* Fondo negro semi transparente */
+    color: #DBE7C9; /* Texto blanco para mayor contraste */
+    padding: 20px; /* Espacio interno alrededor del contenido */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para profundidad */
+    max-width: 600px; /* Ancho máximo para la caja de diálogo */
+    margin: 0 auto; /* Centrado horizontal dentro de 'controls' */
+}
+
+.controls ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px auto;
+    display: table;
+}
+
+.controls li {
+    margin: 10px 0;
+}
+
+
+
+.key {
+    display: inline-block;
+    padding: 3px 5px;
+    margin: 0 2px;
+    background-color: #50623A;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+/* Para hacer la página responsive */
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction:column;
+        height: 20vh;
+    }
+
+    #logo {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    main {
+        margin-top: 40vh;
+        padding: 5%;
+        height: auto;
+    }
+    .modal-content {
+        width: 90%; /* Ancho del contenido del modal en pantallas pequeñas */
+    }
+}
+
+
+
+
+
+
